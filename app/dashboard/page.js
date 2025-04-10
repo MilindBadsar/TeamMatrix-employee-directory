@@ -54,7 +54,10 @@ export default async function DashboardPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-12 text-black">Dashboard</h1>
+      <div className="flex flex-col mb-6">
+        <h1 className="text-3xl font-bold mb-6 text-black">Dashborad</h1>
+        <hr className="border-t border-gray-300 w-full mb-4" />
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         {cards.map((card) => (

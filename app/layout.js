@@ -8,6 +8,7 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import { dark, neobrutalism } from "@clerk/themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,20 +19,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        baseTheme: [neobrutalism],
+      }}
+    >
       <html lang="en">
-        <body className={inter.className}>
-          <header className="flex justify-end items-center p-4 gap-4 h-16">
-            <SignedOut>
-              <SignInButton />
-              <SignUpButton />
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-          </header>
-          {children}
-        </body>
+        <body className={inter.className}>{children}</body>
       </html>
     </ClerkProvider>
   );

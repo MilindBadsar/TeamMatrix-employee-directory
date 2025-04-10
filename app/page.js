@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SignInButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import { SignUpButton } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 import { Users } from "lucide-react";
@@ -29,12 +29,19 @@ export default async function Home() {
             <span className="text-2xl font-bold text-black">TeamMatrix</span>
           </div>
           <div className="space-x-6">
-            <SignInButton mode="modal">
-              <button className="btn btn-primary">Log In</button>
-            </SignInButton>
-            <SignUpButton mode="modal">
-              <button className="btn btn-primary">Sign Up</button>
-            </SignUpButton>
+            <SignedOut>
+              <SignInButton mode="modal">
+                <button className="btn btn-primary">Log In</button>
+              </SignInButton>
+              <SignUpButton mode="modal">
+                <button className="btn btn-primary">Sign Up</button>
+              </SignUpButton>
+            </SignedOut>
+            <SignedIn>
+              <Link href="/dashboard">
+                <button className="btn btn-primary">Dashboard</button>
+              </Link>
+            </SignedIn>
           </div>
         </div>
       </header>

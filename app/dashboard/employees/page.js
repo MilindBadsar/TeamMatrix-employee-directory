@@ -17,7 +17,6 @@ export default function EmployeesPage() {
     setError("");
 
     try {
-      // Build query string from params
       const queryString = Object.keys(params)
         .filter((key) => params[key])
         .map(
@@ -53,9 +52,12 @@ export default function EmployeesPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-12 text-black">
-        Employee Directory
-      </h1>
+      <div className="flex flex-col mb-6">
+        <h1 className="text-3xl font-bold mb-6 text-black">
+          Employee Directory
+        </h1>
+        <hr className="border-t border-gray-300 w-full mb-4" />
+      </div>
 
       <SearchBar onSearch={handleSearch} />
 
