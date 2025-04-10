@@ -41,6 +41,9 @@ export default async function Home() {
               <Link href="/dashboard">
                 <button className="btn btn-primary">Dashboard</button>
               </Link>
+              <Link href="/dashboard/employees">
+                <button className="btn btn-primary">All Employees</button>
+              </Link>
             </SignedIn>
           </div>
         </div>
@@ -48,7 +51,9 @@ export default async function Home() {
 
       <main className="flex-1 flex flex-col items-center justify-center p-6 bg-white">
         <div className="max-w-3xl text-center">
-          <h1 className="text-5xl font-bold mb-4">Employee Directory System</h1>
+          <h1 className="text-5xl font-bold mb-4 text-black">
+            Employee Directory System
+          </h1>
           <p className="text-xl text-gray-400 mb-8">
             A comprehensive solution for managing your organization&apos;s
             employee information.
