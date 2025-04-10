@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import ThemeToggle from "@/components/ThemeToggle";
 import { SignedIn, SignOutButton, useClerk, UserButton } from "@clerk/nextjs";
 import { Users, UserPlus, Search, Download, Home } from "lucide-react";
 
@@ -60,6 +61,14 @@ export default function Sidebar() {
           </div>
           <div className="mt-auto space-y-3">
             {" "}
+            <li>
+              <div className="flex items-center space-x-3 p-3 rounded hover:bg-gray-200 text-gray-900 text-lg">
+                <span>Theme</span>
+                <div className="ml-auto">
+                  <ThemeToggle />
+                </div>
+              </div>
+            </li>
             <li>
               <SignedIn>
                 <div
