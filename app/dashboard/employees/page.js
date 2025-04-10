@@ -53,7 +53,9 @@ export default function EmployeesPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-6">Employee Directory</h1>
+      <h1 className="text-3xl font-bold mb-12 text-black">
+        Employee Directory
+      </h1>
 
       <SearchBar onSearch={handleSearch} />
 

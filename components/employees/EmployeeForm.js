@@ -68,7 +68,7 @@ export default function EmployeeForm({ employee = null }) {
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div>
           <label
             htmlFor="employeeId"
@@ -83,7 +83,7 @@ export default function EmployeeForm({ employee = null }) {
             value={formData.employeeId}
             onChange={handleChange}
             required
-            className="input input-bordered w-full"
+            className="input input-bordered w-full  bg-gray-300 text-black"
           />
         </div>
 
@@ -101,7 +101,7 @@ export default function EmployeeForm({ employee = null }) {
             value={formData.name}
             onChange={handleChange}
             required
-            className="input input-bordered w-full"
+            className="input input-bordered w-full  bg-gray-300 text-black"
           />
         </div>
 
@@ -119,7 +119,7 @@ export default function EmployeeForm({ employee = null }) {
             value={formData.email}
             onChange={handleChange}
             required
-            className="input input-bordered w-full"
+            className="input input-bordered w-full  bg-gray-300 text-black"
           />
         </div>
 
@@ -137,7 +137,7 @@ export default function EmployeeForm({ employee = null }) {
             value={formData.phoneNumber}
             onChange={handleChange}
             required
-            className="input input-bordered w-full"
+            className="input input-bordered w-full  bg-gray-300 text-black"
           />
         </div>
 
@@ -154,7 +154,7 @@ export default function EmployeeForm({ employee = null }) {
             value={formData.department}
             onChange={handleChange}
             required
-            className="select select-bordered w-full"
+            className="select select-bordered w-full  bg-gray-300 text-black"
           >
             <option value="">Select Department</option>
             <option value="Engineering">Engineering</option>
@@ -180,7 +180,7 @@ export default function EmployeeForm({ employee = null }) {
             value={formData.position}
             onChange={handleChange}
             required
-            className="input input-bordered w-full"
+            className="input input-bordered w-full bg-gray-300 text-black"
           />
         </div>
 
@@ -198,12 +198,12 @@ export default function EmployeeForm({ employee = null }) {
             value={formData.joiningDate}
             onChange={handleChange}
             required
-            className="input input-bordered w-full"
+            className="input input-bordered w-full bg-gray-300 text-black"
           />
         </div>
       </div>
 
-      <div className="mt-6">
+      <div className="mt-6 justify-end flex">
         <button
           type="submit"
           disabled={isSubmitting}

@@ -7,8 +7,9 @@ export default function AddEmployeePage() {
   return (
     <div>
       <div className="flex items-center mb-6">
-        <UserPlus className="h-6 w-6 mr-2" />
-        <h1 className="text-2xl font-bold">Add New Employee</h1>
+        <h1 className="text-3xl font-bold mb-12 text-black">
+          Add New Employee
+        </h1>
       </div>
 
       <EmployeeForm />

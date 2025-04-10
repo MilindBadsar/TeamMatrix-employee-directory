@@ -30,12 +30,15 @@ export async function GET(request) {
 
 export async function POST(request) {
   try {
-    const { userId } = auth();
+    const { userId, redirectToSignIn } = await auth();
 
     if (!userId) {
-      return NextResponse.json(
-        { success: false, error: "Unauthorized" },
-        { status: 401 }
+      return (
+        redirectToSignIn(),
+        NextResponse.json(
+          { success: false, error: "Unauthorized" },
+          { status: 401 }
+        )
       );
     }
 

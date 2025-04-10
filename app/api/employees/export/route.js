@@ -5,12 +5,15 @@ import { auth } from "@clerk/nextjs/server";
 
 export async function GET(request) {
   try {
-    const { userId } = auth();
+    const { userId, redirectToSignIn } = await auth();
 
     if (!userId) {
-      return NextResponse.json(
-        { success: false, error: "Unauthorized" },
-        { status: 401 }
+      return (
+        redirectToSignIn(),
+        NextResponse.json(
+          { success: false, error: "Unauthorized" },
+          { status: 401 }
+        )
       );
     }
 

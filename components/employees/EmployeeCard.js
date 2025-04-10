@@ -7,12 +7,12 @@ export default function EmployeeCard({ employee }) {
       <div className="p-6">
         <div className="flex justify-between items-start">
           <div>
-            <h2 className="text-2xl font-bold">{employee.name}</h2>
+            <h2 className="text-2xl font-bold text-black">{employee.name}</h2>
             <p className="text-gray-500">{employee.position}</p>
           </div>
           <Link
             href={`/dashboard/employees/${employee._id}?edit=true`}
-            className="btn btn-sm btn-outline"
+            className="btn btn-sm"
           >
             <Pencil className="h-4 w-4 mr-1" /> Edit
           </Link>
@@ -25,7 +25,7 @@ export default function EmployeeCard({ employee }) {
             </div>
             <div>
               <p className="text-sm text-gray-500">Department</p>
-              <p className="font-medium">{employee.department}</p>
+              <p className="font-medium text-black">{employee.department}</p>
             </div>
           </div>
 
@@ -35,7 +35,7 @@ export default function EmployeeCard({ employee }) {
             </div>
             <div>
               <p className="text-sm text-gray-500">Email</p>
-              <p className="font-medium">{employee.email}</p>
+              <p className="font-medium text-black">{employee.email}</p>
             </div>
           </div>
 
@@ -45,7 +45,7 @@ export default function EmployeeCard({ employee }) {
             </div>
             <div>
               <p className="text-sm text-gray-500">Phone</p>
-              <p className="font-medium">{employee.phoneNumber}</p>
+              <p className="font-medium text-black">{employee.phoneNumber}</p>
             </div>
           </div>
 
@@ -55,7 +55,7 @@ export default function EmployeeCard({ employee }) {
             </div>
             <div>
               <p className="text-sm text-gray-500">Joining Date</p>
-              <p className="font-medium">
+              <p className="font-medium text-black">
                 {new Date(employee.joiningDate).toLocaleDateString()}
               </p>
             </div>

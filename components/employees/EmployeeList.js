@@ -48,9 +48,9 @@ export default function EmployeeList({ employees, onDelete, onRefresh }) {
         </div>
       )}
 
-      <div className="overflow-x-auto">
-        <table className="table w-full">
-          <thead>
+      <div className="overflow-x-auto text-gray-900">
+        <table className="table w-full ">
+          <thead className="text-blue-500">
             <tr>
               <th>Employee ID</th>
               <th>Name</th>

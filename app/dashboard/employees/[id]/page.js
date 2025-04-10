@@ -41,9 +41,9 @@ export default function EmployeeDetailPage({ params }) {
     <div>
       <div className="flex items-center mb-6">
         <Link href="/dashboard/employees" className="mr-4">
-          <ArrowLeft className="h-5 w-5" />
+          <ArrowLeft className="mb-11 text-black" />
         </Link>
-        <h1 className="text-2xl font-bold">
+        <h1 className="text-3xl font-bold mb-12 text-black">
           {isEditing ? "Edit Employee" : "Employee Details"}
         </h1>
       </div>

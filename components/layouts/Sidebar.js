@@ -24,8 +24,8 @@ export default function Sidebar() {
                   href={item.href}
                   className={`flex items-center space-x-2 p-2 rounded hover:bg-gray-100 ${
                     isActive
-                      ? "bg-primary text-white hover:bg-primary-focus"
-                      : ""
+                      ? "bg-primary text-white hover:bg-primary-focus hover:text-gray-800"
+                      : "text-gray-900"
                   }`}
                 >
                   <item.icon className="h-5 w-5" />
@@ -37,7 +37,7 @@ export default function Sidebar() {
           <li>
             <Link
               href="/api/employees/export?format=csv"
-              className="flex items-center space-x-2 p-2 rounded hover:bg-gray-100"
+              className="flex items-center space-x-2 p-2 rounded hover:bg-gray-100 text-gray-900"
               target="_blank"
             >
               <Download className="h-5 w-5" />
