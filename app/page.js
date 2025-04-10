@@ -50,8 +50,8 @@ export default async function Home() {
         <div className="max-w-3xl text-center">
           <h1 className="text-5xl font-bold mb-4">Employee Directory System</h1>
           <p className="text-xl text-gray-400 mb-8">
-            A comprehensive solution for managing your organization's employee
-            information.
+            A comprehensive solution for managing your organization&apos;s
+            employee information.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
