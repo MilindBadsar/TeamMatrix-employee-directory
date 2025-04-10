@@ -23,7 +23,7 @@ export default function Sidebar() {
           {" "}
           <div className="flex items-center justify-center p-4 mb-4">
             <Image
-              src="/images/TeamMatrix logo horiz.png"
+              src="/images/TeamMatrix-logo-horiz.PNG"
               alt="TeamMatrix Logo"
               width={150}
               height={40}
